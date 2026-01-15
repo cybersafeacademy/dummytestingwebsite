@@ -2866,3 +2866,119 @@ html {
         justify-content: center;
     }
 }
+
+/* ============================================
+   TIMELINE MOBILE FIX - CRITICAL
+   ============================================ */
+
+/* Fix timeline layout on mobile */
+@media (max-width: 768px) {
+    .roadmap-section {
+        padding: 3rem 0;
+    }
+    
+    .timeline {
+        padding: 2rem 0 2rem 1rem;
+        margin: 2rem 0 0;
+    }
+    
+    /* Position timeline line to the left */
+    .timeline-line {
+        left: 20px !important;
+        transform: none !important;
+        width: 2px;
+    }
+    
+    /* Force single column layout */
+    .timeline-item,
+    .timeline-item.right {
+        grid-template-columns: 60px 1fr !important;
+        gap: 1rem !important;
+        margin-bottom: 2.5rem;
+    }
+    
+    /* Marker positioning */
+    .timeline-marker {
+        grid-column: 1 !important;
+        align-items: flex-start !important;
+        padding-left: 0;
+    }
+    
+    .marker-icon {
+        width: 40px !important;
+        height: 40px !important;
+        flex-shrink: 0;
+    }
+    
+    .marker-number {
+        font-size: 0.7rem !important;
+    }
+    
+    /* Content positioning */
+    .timeline-content,
+    .timeline-item.right .timeline-content {
+        grid-column: 2 !important;
+        text-align: left !important;
+        padding: 1.25rem !important;
+        margin-left: 0;
+    }
+    
+    /* Typography adjustments */
+    .timeline-title {
+        font-size: 1.15rem !important;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+        word-wrap: break-word;
+    }
+    
+    .timeline-description {
+        font-size: 0.9rem !important;
+        line-height: 1.5;
+        word-wrap: break-word;
+    }
+    
+    .timeline-badge {
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.6rem !important;
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .timeline {
+        padding-left: 0.5rem;
+    }
+    
+    .timeline-line {
+        left: 15px !important;
+    }
+    
+    .timeline-item,
+    .timeline-item.right {
+        grid-template-columns: 50px 1fr !important;
+        gap: 0.75rem !important;
+    }
+    
+    .marker-icon {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    .marker-icon svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    
+    .timeline-content {
+        padding: 1rem !important;
+    }
+    
+    .timeline-title {
+        font-size: 1rem !important;
+    }
+    
+    .timeline-description {
+        font-size: 0.85rem !important;
+    }
+}
