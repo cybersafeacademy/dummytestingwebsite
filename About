@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CyberSafe Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#2563EB"/>
+                        <path d="M20 8L12 12V18C12 23.55 15.84 28.74 21 30C26.16 28.74 30 23.55 30 18V12L20 8ZM20 18.99H28C27.47 22.11 25.72 24.78 23 26.34V14H20V18.99Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">CyberSafe</span>
+                    <span class="logo-sub">ACADEMY</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Homepage</a></li>
+                <li><a href="about.html" class="nav-link active">About Us</a></li>
+                <li><a href="cybersafe-learn.html" class="nav-link">Cybersafe Learn</a></li>
+                <li><a href="cybersafe-kids.html" class="nav-link">Cybersafe Kids</a></li>
+                <li><a href="cybersafe-business.html" class="nav-link">Cybersafe Business</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            
+            <a href="https://learncybersafe.com" class="btn-primary">Start Learning</a>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="section-badge">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="6" stroke="#2563EB" stroke-width="2" fill="none"/>
+                </svg>
+                <span>Our Journey</span>
+            </div>
+            <h1 class="page-title">
+                About CyberSafe<br>
+                <span class="gradient-text">Academy</span>
+            </h1>
+            <p class="page-description">
+                Building a safer digital world through education, innovation, and community engagement.
+            </p>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="roadmap-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Roadmap</h2>
+                <p class="section-description">
+                    Follow our journey from inception to future innovations
+                </p>
+            </div>
+
+            <div class="timeline">
+                <!-- Milestone 1 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker completed">
+                        <div class="marker-number">01</div>
+                        <div class="marker-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 13L9 17L19 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Completed</div>
+                        <h3 class="timeline-title">Mission & Goals</h3>
+                        <p class="timeline-description">
+                            Founded with a vision to make cybersecurity education accessible to everyone. Our mission is to create a safer digital world through comprehensive training.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="timeline-item right" data-aos="fade-up" data-delay="100">
+                    <div class="timeline-marker completed">
+                        <div class="marker-number">02</div>
+                        <div class="marker-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 13L9 17L19 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Completed</div>
+                        <h3 class="timeline-title">Module 1 Beta</h3>
+                        <p class="timeline-description">
+                            Launched our first beta module focusing on fundamental cybersecurity concepts. Testing with early adopters and gathering feedback.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="timeline-item" data-aos="fade-up" data-delay="200">
+                    <div class="timeline-marker completed">
+                        <div class="marker-number">03</div>
+                        <div class="marker-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 13L9 17L19 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Completed</div>
+                        <h3 class="timeline-title">Website Launch</h3>
+                        <p class="timeline-description">
+                            Official website launch with full course catalog, interactive learning platform, and community features.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="timeline-item right" data-aos="fade-up" data-delay="300">
+                    <div class="timeline-marker completed">
+                        <div class="marker-number">04</div>
+                        <div class="marker-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 13L9 17L19 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Completed</div>
+                        <h3 class="timeline-title">Module 1 Full Release</h3>
+                        <p class="timeline-description">
+                            Complete release of Module 1 with enhanced content, video tutorials, and interactive exercises for all age groups.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 5 -->
+                <div class="timeline-item" data-aos="fade-up" data-delay="400">
+                    <div class="timeline-marker upcoming">
+                        <div class="marker-number">05</div>
+                        <div class="marker-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge upcoming-badge">Coming Soon</div>
+                        <h3 class="timeline-title">Corporate Training</h3>
+                        <p class="timeline-description">
+                            Corporate training programs and enterprise solutions for organizations looking to strengthen their security culture.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 6 -->
+                <div class="timeline-item right" data-aos="fade-up" data-delay="500">
+                    <div class="timeline-marker upcoming">
+                        <div class="marker-number">06</div>
+                        <div class="marker-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge upcoming-badge">Coming Soon</div>
+                        <h3 class="timeline-title">Advanced Certification</h3>
+                        <p class="timeline-description">
+                            Advanced certification programs and specialized tracks for cybersecurity professionals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="commitment-section">
+        <div class="container">
+            <div class="commitment-content">
+                <div class="commitment-icon">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                        <circle cx="32" cy="32" r="30" stroke="white" stroke-width="2" opacity="0.2"/>
+                        <path d="M32 12L20 18V28C20 37.1 25.36 45.48 33 48C40.64 45.48 46 37.1 46 28V18L32 12ZM32 29.98H44C43.12 35.38 40.52 39.96 37 42.68V22H32V29.98Z" fill="white"/>
+                    </svg>
+                </div>
+                <h2 class="commitment-title">Our Commitment</h2>
+                <p class="commitment-description">
+                    We are committed to empowering individuals, families, and organizations with the knowledge and skills needed to thrive safely in the digital age. Through continuous innovation and community-focused education, we're building a more secure future for everyone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="8" fill="#2563EB"/>
+                                <path d="M20 8L12 12V18C12 23.55 15.84 28.74 21 30C26.16 28.74 30 23.55 30 18V12L20 8ZM20 18.99H28C27.47 22.11 25.72 24.78 23 26.34V14H20V18.99Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">CyberSafe Academy</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Empowering people of all ages with essential cybersecurity knowledge. Stay safe online with our expert-led courses and resources.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cybersafe-learn.html">Cybersafe Learn</a></li>
+                        <li><a href="cybersafe-kids.html">Cybersafe Kids</a></li>
+                        <li><a href="cybersafe-business.html">Cybersafe Business</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 4H17C17.55 4 18 4.45 18 5V15C18 15.55 17.55 16 17 16H3C2.45 16 2 15.55 2 15V5C2 4.45 2.45 4 3 4Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M18 5L10 11L2 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>hello@cybersafe.academy</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 5C3 3.89543 3.89543 3 5 3H7.27924C7.70967 3 8.09181 3.27543 8.22792 3.68377L9.72574 8.17721C9.88311 8.64932 9.65753 9.16531 9.2 9.36474L7.5 10.2C8.5 12.5 10.5 14.5 12.8 15.5L13.6353 13.8C13.8347 13.3425 14.3507 13.1169 14.8228 13.2743L19.3162 14.7721C19.7246 14.9082 20 15.2903 20 15.7208V18C20 19.1046 19.1046 20 18 20H16C8.26801 20 2 13.732 2 6V4C2 2.89543 2.89543 2 4 2H6.27924" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CyberSafe Academy. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M6.29 18.25c7.55 0 11.67-6.25 11.67-11.67v-.53c.8-.59 1.49-1.3 2.04-2.13-.75.33-1.54.55-2.36.65a4.12 4.12 0 0 0 1.8-2.27c-.8.48-1.68.81-2.6 1a4.1 4.1 0 0 0-7 3.74 11.65 11.65 0 0 1-8.45-4.3 4.1 4.1 0 0 0 1.27 5.49C2.01 8.2 1.37 8.03.8 7.7v.05a4.1 4.1 0 0 0 3.3 4.03 4.1 4.1 0 0 1-1.86.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 0 16.4a11.62 11.62 0 0 0 6.29 1.84"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5 3c0 1.1-.7 2-2 2-1.2 0-2-.9-2-1.9C1 2 1.8 1 3 1s2 .9 2 2zM1 19V6h4v13H1zm6-13h3.8v1.8c.6-1.1 2.2-2 4-2 4.1 0 5.2 2.7 5.2 6.2v7h-4v-6.2c0-1.5 0-3.5-2-3.5s-2.3 1.6-2.3 3.4V19H7V6z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

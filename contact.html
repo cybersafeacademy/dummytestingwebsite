@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CyberSafe Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#2563EB"/>
+                        <path d="M20 8L12 12V18C12 23.55 15.84 28.74 21 30C26.16 28.74 30 23.55 30 18V12L20 8ZM20 18.99H28C27.47 22.11 25.72 24.78 23 26.34V14H20V18.99Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">CyberSafe</span>
+                    <span class="logo-sub">ACADEMY</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Homepage</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="cybersafe-learn.html" class="nav-link">Cybersafe Learn</a></li>
+                <li><a href="cybersafe-kids.html" class="nav-link">Cybersafe Kids</a></li>
+                <li><a href="cybersafe-business.html" class="nav-link">Cybersafe Business</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+            </ul>
+            
+            <a href="https://cybersafe-quiz.netlify.app" class="btn-primary" target="_blank" rel="noopener noreferrer">Start Learning</a>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="section-badge">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 4H13C13.55 4 14 4.45 14 5V11C14 11.55 13.55 12 13 12H3C2.45 12 2 11.55 2 11V5C2 4.45 2.45 4 3 4Z" stroke="white" stroke-width="1.5"/>
+                    <path d="M14 5L8 9L2 5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>Contact Us</span>
+            </div>
+            <h1 class="page-title">
+                Get in Touch
+            </h1>
+            <p class="page-description">
+                Have questions about our courses? We're here to help. Reach out and we'll get back to you as soon as possible.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p class="contact-description">
+                        Send us an email anytime. We typically respond within 24 hours during business days.
+                    </p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 4H21C21.55 4 22 4.45 22 5V19C22 19.55 21.55 20 21 20H3C2.45 20 2 19.55 2 19V5C2 4.45 2.45 4 3 4Z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M22 5L12 13L2 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>cybersafeacademy@outlook.com</p>
+                                <p class="method-note">We'll get back to you within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>We typically respond within 24 hours during business days.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="How can we help you?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="6" placeholder="Tell us more about your question or inquiry..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-large full-width">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M2 10L18 3L11 19L9 12L2 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="8" fill="#2563EB"/>
+                                <path d="M20 8L12 12V18C12 23.55 15.84 28.74 21 30C26.16 28.74 30 23.55 30 18V12L20 8ZM20 18.99H28C27.47 22.11 25.72 24.78 23 26.34V14H20V18.99Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">CyberSafe Academy</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Empowering people of all ages with essential cybersecurity knowledge. Stay safe online with our expert-led courses and resources.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cybersafe-learn.html">Cybersafe Learn</a></li>
+                        <li><a href="cybersafe-kids.html">Cybersafe Kids</a></li>
+                        <li><a href="cybersafe-business.html">Cybersafe Business</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 4H17C17.55 4 18 4.45 18 5V15C18 15.55 17.55 16 17 16H3C2.45 16 2 15.55 2 15V5C2 4.45 2.45 4 3 4Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M18 5L10 11L2 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>cybersafeacademy@outlook.com</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CyberSafe Academy. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/cybersafe-academy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5 3c0 1.1-.7 2-2 2-1.2 0-2-.9-2-1.9C1 2 1.8 1 3 1s2 .9 2 2zM1 19V6h4v13H1zm6-13h3.8v1.8c.6-1.1 2.2-2 4-2 4.1 0 5.2 2.7 5.2 6.2v7h-4v-6.2c0-1.5 0-3.5-2-3.5s-2.3 1.6-2.3 3.4V19H7V6z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
