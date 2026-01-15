@@ -63,8 +63,13 @@
                 Protect your business with comprehensive cybersecurity training. Reduce risk, ensure compliance, and build a security-aware culture.
             </p>
             <div class="hero-buttons">
-                
-
+                <a href="#request-demo" class="btn-white btn-large">Request Demo</a>
+                <a href="#" class="btn-secondary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M8 5L13 10L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Learn More
+                </a>
             </div>
         </div>
     </section>
@@ -158,37 +163,38 @@
                     </p>
                 </div>
 
-                <form class="business-form">
+                <form class="business-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="0ddfe14d-dc06-4183-9f3d-a954bbaa8842">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="company-name">Company Name</label>
-                            <input type="text" id="company-name" placeholder="Acme Corporation" required>
+                            <input type="text" id="company-name" name="company_name" placeholder="Acme Corporation" required>
                         </div>
                         <div class="form-group">
                             <label for="contact-name">Contact Name</label>
-                            <input type="text" id="contact-name" placeholder="John Doe" required>
+                            <input type="text" id="contact-name" name="contact_name" placeholder="John Doe" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="work-email">Work Email</label>
-                            <input type="email" id="work-email" placeholder="john@company.com" required>
+                            <input type="email" id="work-email" name="email" placeholder="john@company.com" required>
                         </div>
                         <div class="form-group">
                             <label for="phone-number">Phone Number</label>
-                            <input type="tel" id="phone-number" placeholder="+1 (555) 000-0000" required>
+                            <input type="tel" id="phone-number" name="phone" placeholder="+1 (555) 000-0000" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="employees">Number of Employees</label>
-                        <input type="text" id="employees" placeholder="e.g. 50-100" required>
+                        <input type="text" id="employees" name="employees" placeholder="e.g. 50-100" required>
                     </div>
 
                     <div class="form-group">
                         <label for="additional-info">Additional Information</label>
-                        <textarea id="additional-info" rows="4" placeholder="Tell us about your training needs..."></textarea>
+                        <textarea id="additional-info" name="additional_info" rows="4" placeholder="Tell us about your training needs..."></textarea>
                     </div>
 
                     <button type="submit" class="btn-primary btn-large full-width">
@@ -243,7 +249,7 @@
                                 <path d="M3 4H17C17.55 4 18 4.45 18 5V15C18 15.55 17.55 16 17 16H3C2.45 16 2 15.55 2 15V5C2 4.45 2.45 4 3 4Z" stroke="currentColor" stroke-width="1.5"/>
                                 <path d="M18 5L10 11L2 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
-                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="43203a2126313022252622202227262e3a032c36372f2c2c286d202c2e">[email&#160;protected]</a></span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8be8f2e9eef9f8eaedeeeae8eaefeee6f2cbe4feffe7e4e4e0a5e8e4e6">[email&#160;protected]</a></span>
                         </li>
                         
                     </ul>

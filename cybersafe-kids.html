@@ -304,32 +304,33 @@
                         Interested in bringing CyberSafe Kids to your school? Fill out the form and we'll get in touch to discuss how we can customize our games for your students.
                     </p>
                     
-                    <form class="schools-form">
+                    <form class="schools-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="0ddfe14d-dc06-4183-9f3d-a954bbaa8842">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="school-name">School Name *</label>
-                                <input type="text" id="school-name" placeholder="Springfield Elementary" required>
+                                <input type="text" id="school-name" name="school_name" placeholder="Springfield Elementary" required>
                             </div>
                             <div class="form-group">
                                 <label for="contact-name">Your Name *</label>
-                                <input type="text" id="contact-name" placeholder="Jane Smith" required>
+                                <input type="text" id="contact-name" name="contact_name" placeholder="Jane Smith" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="school-email">Email Address *</label>
-                                <input type="email" id="school-email" placeholder="jane@school.edu" required>
+                                <input type="email" id="school-email" name="email" placeholder="jane@school.edu" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone-number">Phone Number</label>
-                                <input type="tel" id="phone-number" placeholder="+1 (555) 000-0000">
+                                <input type="tel" id="phone-number" name="phone" placeholder="+1 (555) 000-0000">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="student-count">Number of Students *</label>
-                            <select id="student-count" required>
+                            <select id="student-count" name="student_count" required>
                                 <option value="">Select range</option>
                                 <option value="1-50">1-50 students</option>
                                 <option value="51-200">51-200 students</option>
@@ -341,7 +342,7 @@
 
                         <div class="form-group">
                             <label for="school-message">Tell Us About Your Needs</label>
-                            <textarea id="school-message" rows="4" placeholder="What would you like to achieve with CyberSafe Kids at your school?"></textarea>
+                            <textarea id="school-message" name="message" rows="4" placeholder="What would you like to achieve with CyberSafe Kids at your school?"></textarea>
                         </div>
 
                         <button type="submit" class="btn-primary btn-large full-width">
@@ -401,7 +402,7 @@
                                 <path d="M3 4H17C17.55 4 18 4.45 18 5V15C18 15.55 17.55 16 17 16H3C2.45 16 2 15.55 2 15V5C2 4.45 2.45 4 3 4Z" stroke="currentColor" stroke-width="1.5"/>
                                 <path d="M18 5L10 11L2 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
-                            <span>cybersafeacademy@outlook.com</span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="beddc7dcdbcccddfd8dbdfdddfdadbd3c7fed1cbcad2d1d1d590ddd1d3">[email&#160;protected]</a></span>
                         </li>
                         
                     </ul>
@@ -415,12 +416,4 @@
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M5 3c0 1.1-.7 2-2 2-1.2 0-2-.9-2-1.9C1 2 1.8 1 3 1s2 .9 2 2zM1 19V6h4v13H1zm6-13h3.8v1.8c.6-1.1 2.2-2 4-2 4.1 0 5.2 2.7 5.2 6.2v7h-4v-6.2c0-1.5 0-3.5-2-3.5s-2.3 1.6-2.3 3.4V19H7V6z"/>
                         </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                    
