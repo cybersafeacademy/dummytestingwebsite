@@ -1348,48 +1348,64 @@ html {
         margin: 2rem auto 0;
         overflow-x: hidden;
         max-width: 100%;
+        display: block; /* Remove grid on mobile */
     }
     
+    /* Hide the vertical line on mobile */
     .timeline-line {
-        left: 28px;
-        transform: none;
+        display: none;
     }
     
+    /* Stack all timeline items vertically as simple cards */
     .timeline-item,
     .timeline-item.right {
-        grid-template-columns: 56px 1fr;
-        gap: 1rem;
-        margin-bottom: 3rem;
+        display: block; /* Remove grid, use block */
+        margin-bottom: 2rem;
         max-width: 100%;
+        position: relative;
     }
     
+    /* Hide the timeline markers (circles) on mobile */
+    .timeline-marker {
+        display: none;
+    }
+    
+    /* Make content full-width cards */
     .timeline-item .timeline-content,
     .timeline-item.right .timeline-content {
-        grid-column: 2;
-        text-align: left;
+        width: 100%;
         max-width: 100%;
+        text-align: left;
+        padding: 1.5rem;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        position: relative;
     }
     
-    .timeline-item .timeline-marker,
-    .timeline-item.right .timeline-marker {
-        grid-column: 1;
-    }
-    
-    .marker-icon {
-        width: 48px;
-        height: 48px;
-    }
-    
-    .marker-number {
-        font-size: 0.75rem;
+    /* Add the number badge to the top of each card */
+    .timeline-content::before {
+        content: attr(data-number);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 32px;
+        height: 32px;
+        background: var(--primary-blue);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+        font-weight: 700;
     }
     
     .timeline-badge {
         font-size: 0.75rem;
         padding: 0.35rem 0.75rem;
         white-space: nowrap;
+        display: inline-block;
+        margin-bottom: 0.75rem;
     }
     
     .timeline-title {
@@ -1397,12 +1413,14 @@ html {
         word-wrap: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
+        margin-bottom: 0.75rem;
     }
     
     .timeline-description {
         font-size: 0.9rem;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        line-height: 1.6;
     }
     
     .page-title {
@@ -1422,19 +1440,8 @@ html {
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
-    .timeline-item,
-    .timeline-item.right {
-        grid-template-columns: 48px 1fr;
-        gap: 0.75rem;
-    }
-    
-    .timeline-line {
-        left: 24px;
-    }
-    
-    .marker-icon {
-        width: 40px;
-        height: 40px;
+    .timeline-content {
+        padding: 1.25rem;
     }
     
     .timeline-title {
@@ -1447,6 +1454,10 @@ html {
     
     .container {
         padding: 0 0.75rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
     }
 }
 
