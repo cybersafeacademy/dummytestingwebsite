@@ -19,8 +19,34 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add stagger delay
         const delay = el.getAttribute('data-delay') || 0;
         el.style.transitionDelay = `${delay}ms`;
+        
+        // Check if element is already in viewport on load
+        const rect = el.getBoundingClientRect();
+        const isInViewport = (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+        
+        // If in viewport, animate immediately
+        if (isInViewport) {
+            setTimeout(() => {
+                el.classList.add('aos-animate');
+            }, parseInt(delay));
+        }
+        
         observer.observe(el);
     });
+    
+    // Fallback: Show all elements after 3 seconds if still hidden
+    setTimeout(() => {
+        animatedElements.forEach(el => {
+            if (!el.classList.contains('aos-animate')) {
+                el.classList.add('aos-animate');
+            }
+        });
+    }, 3000);
 });
 
 // Mobile Menu Toggle - Enhanced for reliability

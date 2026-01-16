@@ -940,6 +940,13 @@ a {
 [data-aos] {
     opacity: 0;
     transition: opacity 0.8s ease, transform 0.8s ease;
+    animation: aos-fallback 0.1s ease 2s forwards; /* Fallback: show after 2s if JS doesn't load */
+}
+
+@keyframes aos-fallback {
+    to {
+        opacity: 1;
+    }
 }
 
 [data-aos="fade-up"] {
@@ -947,8 +954,9 @@ a {
 }
 
 [data-aos].aos-animate {
-    opacity: 1;
+    opacity: 1 !important;
     transform: translateY(0);
+    animation: none; /* Cancel fallback animation */
 }
 
 /* Smooth Scrolling */
@@ -2588,66 +2596,5 @@ html {
     
     .form-row {
         grid-template-columns: 1fr;
-    }
-}
-
-/* ============================================
-   MOBILE RESPONSIVENESS - ADDED BY CLAUDE
-   ============================================ */
-
-@media (max-width: 768px) {
-    /* Make everything responsive on mobile */
-    body {
-        font-size: 15px;
-    }
-    
-    .container {
-        padding: 0 1.5rem;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .section-title {
-        font-size: 1.75rem;
-    }
-    
-    .page-title {
-        font-size: 2rem;
-    }
-    
-    /* Fix timeline on about page */
-    .timeline {
-        padding-left: 1rem;
-    }
-    
-    .timeline-line {
-        left: 20px !important;
-        transform: none !important;
-    }
-    
-    .timeline-item,
-    .timeline-item.right {
-        grid-template-columns: 60px 1fr !important;
-        gap: 1rem !important;
-    }
-    
-    .timeline-marker {
-        grid-column: 1 !important;
-    }
-    
-    .timeline-content,
-    .timeline-item.right .timeline-content {
-        grid-column: 2 !important;
-        text-align: left !important;
-    }
-    
-    .timeline-title {
-        font-size: 1.15rem !important;
-    }
-    
-    .timeline-description {
-        font-size: 0.9rem !important;
     }
 }
