@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Test - CyberSafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2563EB;
+        }
+        button {
+            background: #2563EB;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #1D4ED8;
+        }
+        .status {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .success {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+        .error {
+            background: #FEE2E2;
+            color: #991B1B;
+        }
+        .info {
+            background: #DBEAFE;
+            color: #1E40AF;
+        }
+        .warning {
+            background: #FEF3C7;
+            color: #92400E;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-box">
+        <h1>🔊 Audio Test Page</h1>
+        <p>Let's test if your audio files are working!</p>
+        
+        <div id="status" class="status info">
+            Ready to test! Click the buttons below.
+        </div>
+
+        <h3>Test 1: Play yay.mp3</h3>
+        <button onclick="testYay()">▶️ Play YAY Sound</button>
+        
+        <h3>Test 2: Play ohno.mp3</h3>
+        <button onclick="testOhno()">▶️ Play OHNO Sound</button>
+        
+        <h3>Test 3: Check File Paths</h3>
+        <button onclick="checkPaths()">🔍 Check Files</button>
+        
+        <div id="details" style="margin-top: 20px; font-size: 14px; color: #666;"></div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="yaySound" preload="auto">
+        <source src="yay.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="ohnoSound" preload="auto">
+        <source src="ohno.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const status = document.getElementById('status');
+        const details = document.getElementById('details');
+
+        function updateStatus(message, type) {
+            status.className = 'status ' + type;
+            status.textContent = message;
+        }
+
+        function addDetail(message) {
+            details.innerHTML += message + '<br>';
+        }
+
+        function testYay() {
+            updateStatus('Testing yay.mp3...', 'info');
+            details.innerHTML = '';
+            
+            const audio = document.getElementById('yaySound');
+            
+            addDetail('🔍 Checking yay.mp3...');
+            addDetail('File path: ' + audio.children[0].src);
+            addDetail('Audio ready state: ' + audio.readyState);
+            
+            audio.play()
+                .then(() => {
+                    updateStatus('✅ YAY sound is playing!', 'success');
+                    addDetail('✅ Audio playing successfully!');
+                })
+                .catch(error => {
+                    updateStatus('❌ Error playing yay.mp3', 'error');
+                    addDetail('❌ Error: ' + error.message);
+                    addDetail('💡 Check: Is the file uploaded? Is the name correct?');
+                });
+        }
+
+        function testOhno() {
+            updateStatus('Testing ohno.mp3...', 'info');
+            details.innerHTML = '';
+            
+            const audio = document.getElementById('ohnoSound');
+            
+            addDetail('🔍 Checking ohno.mp3...');
+            addDetail('File path: ' + audio.children[0].src);
+            addDetail('Audio ready state: ' + audio.readyState);
+            
+            audio.play()
+                .then(() => {
+                    updateStatus('✅ OHNO sound is playing!', 'success');
+                    addDetail('✅ Audio playing successfully!');
+                })
+                .catch(error => {
+                    updateStatus('❌ Error playing ohno.mp3', 'error');
+                    addDetail('❌ Error: ' + error.message);
+                    addDetail('💡 Check: Is the file uploaded? Is the name correct?');
+                });
+        }
+
+        function checkPaths() {
+            updateStatus('Checking file paths...', 'info');
+            details.innerHTML = '';
+            
+            const yayAudio = document.getElementById('yaySound');
+            const ohnoAudio = document.getElementById('ohnoSound');
+            
+            addDetail('<strong>File Check:</strong>');
+            addDetail('yay.mp3 path: ' + yayAudio.children[0].src);
+            addDetail('yay.mp3 ready state: ' + yayAudio.readyState + ' (4 = loaded)');
+            addDetail('');
+            addDetail('ohno.mp3 path: ' + ohnoAudio.children[0].src);
+            addDetail('ohno.mp3 ready state: ' + ohnoAudio.readyState + ' (4 = loaded)');
+            addDetail('');
+            addDetail('<strong>What the numbers mean:</strong>');
+            addDetail('0 = HAVE_NOTHING (file not found)');
+            addDetail('1 = HAVE_METADATA (file found, loading...)');
+            addDetail('4 = HAVE_ENOUGH_DATA (ready to play!)');
+            
+            if (yayAudio.readyState === 0 || ohnoAudio.readyState === 0) {
+                updateStatus('⚠️ Audio files not loading!', 'warning');
+                addDetail('');
+                addDetail('❌ Files might be missing or paths are wrong!');
+            } else if (yayAudio.readyState === 4 && ohnoAudio.readyState === 4) {
+                updateStatus('✅ Both files are loaded and ready!', 'success');
+            } else {
+                updateStatus('⏳ Files are loading...', 'info');
+            }
+        }
+
+        // Auto-check on page load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                addDetail('Page loaded. Waiting 2 seconds for audio files...');
+                setTimeout(checkPaths, 2000);
+            }, 100);
+        });
+    </script>
+</body>
+</html>
