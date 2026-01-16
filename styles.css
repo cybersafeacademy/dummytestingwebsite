@@ -5,6 +5,24 @@
     box-sizing: border-box;
 }
 
+/* ================================
+   GLOBAL MOBILE SAFETY FIXES
+================================ */
+/* Prevent horizontal scrolling */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure all elements respect viewport width */
+*, *::before, *::after {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 :root {
     /* Colors */
     --primary-blue: #2563EB;
@@ -48,6 +66,19 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* ================================
+   MEDIA ELEMENT SAFETY
+================================ */
+img, video, iframe, embed, object {
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -1119,6 +1150,7 @@ html {
 .roadmap-section {
     padding: 6rem 0;
     background: #f8fafc;
+    overflow-x: hidden;
 }
 
 .timeline {
@@ -1126,6 +1158,7 @@ html {
     max-width: 900px;
     margin: 4rem auto 0;
     padding: 2rem 0;
+    overflow-x: hidden;
 }
 
 .timeline-line {
@@ -1214,6 +1247,9 @@ html {
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all var(--transition-base);
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .timeline-content:hover {
@@ -1257,11 +1293,16 @@ html {
     font-weight: 700;
     color: var(--dark-navy);
     margin-bottom: 0.75rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .timeline-description {
     color: #64748b;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Commitment Section */
@@ -1299,15 +1340,19 @@ html {
 @media (max-width: 768px) {
     .roadmap-section {
         padding: 4rem 0;
+        overflow-x: hidden;
     }
     
     .timeline {
         padding: 1rem 0;
         margin: 2rem auto 0;
+        overflow-x: hidden;
+        max-width: 100%;
     }
     
     .timeline-line {
         left: 28px;
+        transform: none;
     }
     
     .timeline-item,
@@ -1315,12 +1360,16 @@ html {
         grid-template-columns: 56px 1fr;
         gap: 1rem;
         margin-bottom: 3rem;
+        max-width: 100%;
     }
     
     .timeline-item .timeline-content,
     .timeline-item.right .timeline-content {
         grid-column: 2;
         text-align: left;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .timeline-item .timeline-marker,
@@ -1340,16 +1389,20 @@ html {
     .timeline-badge {
         font-size: 0.75rem;
         padding: 0.35rem 0.75rem;
+        white-space: nowrap;
     }
     
     .timeline-title {
         font-size: 1.25rem;
         word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
     
     .timeline-description {
         font-size: 0.9rem;
         word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .page-title {
@@ -1358,6 +1411,12 @@ html {
     
     .commitment-title {
         font-size: 2rem;
+    }
+    
+    /* Prevent any content overflow */
+    .container {
+        padding: 0 1rem;
+        max-width: 100%;
     }
 }
 
@@ -1384,6 +1443,10 @@ html {
     
     .timeline-description {
         font-size: 0.85rem;
+    }
+    
+    .container {
+        padding: 0 0.75rem;
     }
 }
 
