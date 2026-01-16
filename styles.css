@@ -40,6 +40,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     background: #ffffff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 img {
@@ -57,6 +59,12 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
 }
 
 /* Navigation */
@@ -1289,14 +1297,24 @@ html {
 
 /* Responsive Timeline */
 @media (max-width: 768px) {
+    .roadmap-section {
+        padding: 4rem 0;
+    }
+    
+    .timeline {
+        padding: 1rem 0;
+        margin: 2rem auto 0;
+    }
+    
     .timeline-line {
-        left: 40px;
+        left: 28px;
     }
     
     .timeline-item,
     .timeline-item.right {
-        grid-template-columns: 80px 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 56px 1fr;
+        gap: 1rem;
+        margin-bottom: 3rem;
     }
     
     .timeline-item .timeline-content,
@@ -1310,12 +1328,62 @@ html {
         grid-column: 1;
     }
     
+    .marker-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .marker-number {
+        font-size: 0.75rem;
+    }
+    
+    .timeline-badge {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.75rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.25rem;
+        word-wrap: break-word;
+    }
+    
+    .timeline-description {
+        font-size: 0.9rem;
+        word-wrap: break-word;
+    }
+    
     .page-title {
         font-size: 2.5rem;
     }
     
     .commitment-title {
         font-size: 2rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .timeline-item,
+    .timeline-item.right {
+        grid-template-columns: 48px 1fr;
+        gap: 0.75rem;
+    }
+    
+    .timeline-line {
+        left: 24px;
+    }
+    
+    .marker-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-description {
+        font-size: 0.85rem;
     }
 }
 
